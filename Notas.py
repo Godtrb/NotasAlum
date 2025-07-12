@@ -15,6 +15,7 @@ def AlumnoReg(ListAlumn=[]):
         if (NotFin>=1|NotFin<=100):
             newalumn=Alumno(name,carne,Carrera,NotFin)
             ListAlumn.append(newalumn)
+            return 1
         elif NotFin <0 |NotFin>100:
             print("Nota invalida.")
     elif carne<0:
@@ -38,16 +39,24 @@ def AlumSearch (ListAlum=[]):
             print("Alumno no encontrado.")
 
 picker=0
+alumsthere=0
 ListAlum=[]
 while picker !=4:
-    print("-----Menu Veterinario-----")
+    print("-----Menu Notas-----")
     print("1)Registrar nuevo alumno")
-    print("2)Gestion mascotas")
-    print("3)Citas medicas")
+    print("2)Buscar alumno por carne")
+    print("3)Verificar promedio")
     print("4)Salir")
     picker= int(input("Seleccione una opcion:"))
     match picker:
         case 1:
-            AlumnoReg(ListAlum)
+            alumsthere=AlumnoReg(ListAlum)
         case 2:
-
+            if alumsthere==0:
+                print("No hay alumnos encontrados")
+            elif alumsthere==1:
+                AlumSearch(ListAlum)
+        case 3:
+            if alumsthere==0:
+                print("No hay alumnos encontrados")
+            elif alumsthere==1:
