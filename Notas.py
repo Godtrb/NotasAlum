@@ -30,7 +30,12 @@ def AlumSearch (ListAlum=[]):
     if AlumPicker>0:
         for alum in ListAlum:
             if alum.carne==AlumPicker:
-                print(alum.nombre)
+                infoalumn(alum)
+                found=1
+    elif AlumPicker<0:
+        print("Carne invalido.")
+        if found==0:
+            print("Alumno no encontrado.")
 
 picker=0
 ListAlum=[]
