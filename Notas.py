@@ -37,7 +37,14 @@ def AlumSearch (ListAlum=[]):
         print("Carne invalido.")
         if found==0:
             print("Alumno no encontrado.")
+def PromInfo(ListAlum=[]):
+    prom=0
+    countalums=ListAlum.count()
+    for alum in ListAlum:
+        prom=prom+alum.Nota_Final
 
+    prom=prom/countalums
+    print("El promedio de los ",countalums," alumnos es:",prom)
 picker=0
 alumsthere=0
 ListAlum=[]
