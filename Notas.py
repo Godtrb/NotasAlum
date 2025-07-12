@@ -17,6 +17,8 @@ def AlumnoReg(ListAlumn=[]):
             ListAlumn.append(newalumn)
         elif NotFin <0 |NotFin>100:
             print("Nota invalida.")
+    elif carne<0:
+        print("Carne invalido.")
 
 picker=0
 while picker !=4:
