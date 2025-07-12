@@ -19,8 +19,21 @@ def AlumnoReg(ListAlumn=[]):
             print("Nota invalida.")
     elif carne<0:
         print("Carne invalido.")
+def infoalumn (Alumno):
+    print("Nombre: ",Alumno.nombre)
+    print("Carne: ",Alumno.carne)
+    print("Carrera: ",Alumno.Carrera)
+    print("Nota final: ",Alumno.Nota_Final)
+def AlumSearch (ListAlum=[]):
+    found=0
+    AlumPicker=int(input("Ingrese el carne del alumno a buscar:"))
+    if AlumPicker>0:
+        for alum in ListAlum:
+            if alum.carne==AlumPicker:
+                print(alum.nombre)
 
 picker=0
+ListAlum=[]
 while picker !=4:
     print("-----Menu Veterinario-----")
     print("1)Registrar nuevo alumno")
@@ -30,3 +43,6 @@ while picker !=4:
     picker= int(input("Seleccione una opcion:"))
     match picker:
         case 1:
+            AlumnoReg(ListAlum)
+        case 2:
+
