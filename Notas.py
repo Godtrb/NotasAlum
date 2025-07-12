@@ -67,3 +67,4 @@ while picker !=4:
             if alumsthere==0:
                 print("No hay alumnos encontrados")
             elif alumsthere==1:
+                PromInfo(ListAlum)
